@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Resend = () => {
+const OtpForm = () => {
   return (
     <div>
-      Resend
+      
     </div>
   )
 }
 
-export default Resend
+export default OtpForm
