@@ -8,7 +8,7 @@ const Signup = () => {
     heading1="Hello"
     formtype="signup"
     image={img}
-    
+    children={Signup}
     />
   )
 }

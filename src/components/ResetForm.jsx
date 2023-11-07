@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 const ResetForm = () => {
 
-  const[formData,setFormData]=useState({cnfpassword:"" ,password:""})
+  const[formData,setFormData]=useState({cnfpassword:"" ,password:"",otp:""})
     const navigate=useNavigate();
 
     function changeHandler(event)
@@ -21,7 +21,7 @@ const ResetForm = () => {
     function submitHandler(event)
     {
   event.preventDefault();
-  toast.success("Enter Otp To Sign In");
+  toast.success("Please Login");
     }
   return (
     <div>
@@ -34,25 +34,34 @@ const ResetForm = () => {
       <input
         type="password"
         value={formData.password}
-        name='name'
+        name='password'
         onChange={changeHandler}
-        placeholder="Enter username"
+        placeholder="Password"
       />
     </div>
     <div className="input-group">
-      <label>Password</label>
+     
       <input
         type="password"
-        value={formData.password}
-        name='password'
+        value={formData.cnfpassword}
+        name='cnfpassword'
         onChange={changeHandler}
-        placeholder="Enter password"
+        placeholder="Re-type Password"
       />
     </div>
-    <div>
-      <Link to='/reset'>Forgot Password?</Link>
+    <div className="input-group">
+     
+      <input
+        type="text"
+        value={formData.otp}
+        name='otp'
+        onChange={changeHandler}
+        placeholder="Enter Otp "
+      />
     </div>
-    <button >Sign in</button> 
+
+    <button 
+      onClick={()=> ( navigate("/"))}  >Continue</button> 
   </div>
  
       

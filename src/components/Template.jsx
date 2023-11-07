@@ -1,16 +1,28 @@
 import React from 'react'
 import SignupForm from './SignupForm'
 import LoginForm from './LoginForm'
+import ResetForm from './ResetForm'
+import OtpForm from './OtpForm'
 
-const Template = ({heading,heading1,formtype,image}) => {
+const Template = ({heading,heading1,formtype,image ,children}) => {
   return (
     <div className='template-container'>
          <div className='main-content'>
              <div> <h1>{heading}</h1></div>
              <div>{heading1}</div>
-             {formtype ==='login'?
+             {/* {formtype ==='login'?
         (<LoginForm  />):
-        (<SignupForm  />)}
+        (<SignupForm  />)} */}
+
+{formtype === 'login' ? (
+        <LoginForm/>
+      ) : formtype === 'signup' ? (
+       <SignupForm/>
+      ) : formtype === 'reset' ? (
+        <ResetForm/>
+      ) : (
+        <OtpForm/>
+      )}
 
           <div>
       <p>OR</p>

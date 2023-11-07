@@ -8,6 +8,7 @@ const Login = () => {
   heading1="Welcome back"
   formtype="login"
   image={mainimg}
+  children={Login}
   
   />
   )

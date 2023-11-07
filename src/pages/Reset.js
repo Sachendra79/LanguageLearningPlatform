@@ -6,8 +6,9 @@ const Reset = () => {
     <Template 
   heading="Password Reset"
   heading1="Hello"
-  formtype="resend"
+  formtype="reset"
   image={img}
+  children={Reset}
   
   />
   )

@@ -8,7 +8,7 @@ const Otp = () => {
   heading1="Hello"
   formtype="otp"
   image={mainimg}
-  
+  children={Otp}
   />
   )
 }

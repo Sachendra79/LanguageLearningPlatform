@@ -3,11 +3,13 @@ import { useState  } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
+import ResetForm from './ResetForm'
 
 const LoginForm = () => {
 
     const[formData,setFormData]=useState({name:"" ,password:""})
     const navigate=useNavigate();
+    const [formtype , setFormType]=useState("");
 
     function changeHandler(event)
     {
@@ -57,7 +59,7 @@ const LoginForm = () => {
         />
       </div>
       <div>
-        <Link to='/reset'>Forgot Password?</Link>
+        <Link to='/reset' >Forgot Password?</Link>
       </div>
       <button >Sign in</button> 
     </div>
