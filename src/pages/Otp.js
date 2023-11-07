@@ -4,7 +4,7 @@ import Template from '../components/Template'
 const Otp = () => {
   return (
     <Template 
-  heading="Create Your Account"
+  heading="Verify Your OTP"
   heading1="Hello"
   formtype="otp"
   image={mainimg}
