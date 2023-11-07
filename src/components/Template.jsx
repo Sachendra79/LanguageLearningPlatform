@@ -10,9 +10,7 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
          <div className='main-content'>
              <div> <h1>{heading}</h1></div>
              <div>{heading1}</div>
-             {/* {formtype ==='login'?
-        (<LoginForm  />):
-        (<SignupForm  />)} */}
+             
 
 {formtype === 'login' ? (
         <LoginForm/>
@@ -24,7 +22,7 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
         <OtpForm/>
       )}
 
-          <div>
+          <div className='button-container'>
       <p>OR</p>
       <button><p>Sign in with Google</p></button>
           </div>
