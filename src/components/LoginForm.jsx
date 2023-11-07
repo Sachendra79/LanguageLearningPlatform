@@ -28,34 +28,36 @@ const LoginForm = () => {
     }
 
   return (
-    <div>
+    <div className='login-container '>
 
-        <div>
-        <button>Login</button>
-        <button onClick={()=>(navigate("/signup"))}>Signup</button>
+        <div className='btn '>
+        <button className='login-btn '>Login</button>
+        <button className='signup-btn' onClick={()=>(navigate("/signup"))}>Signup</button>
       </div>
         <form onSubmit={submitHandler}>
     
-      <div className="container">
+      <div className="container  ">
       
-      <div className="input-group">
-        <label>Username</label>
+      <div className="input-group ">
+       
         <input
           type="text"
           value={formData.name}
           name='name'
           onChange={changeHandler}
           placeholder="Enter username"
+          className=' '
         />
       </div>
       <div className="input-group">
-        <label>Password</label>
+        
         <input
           type="password"
           value={formData.password}
           name='password'
           onChange={changeHandler}
           placeholder="Enter password"
+          className=''
         />
       </div>
       <div>

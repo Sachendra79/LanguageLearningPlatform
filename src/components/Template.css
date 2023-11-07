@@ -1,0 +1,19 @@
+/* *{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+.template-container 
+{
+    background-color:  #E5E5E7;
+    display: flex;
+    
+}
+.main-content 
+{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+} */
