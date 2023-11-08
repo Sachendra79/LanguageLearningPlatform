@@ -1,10 +1,15 @@
 import React from 'react'
-
+import mainimg from '../assets/Group(1).png'
+import Template from '../components/Template'
 const Otp = () => {
   return (
-    <div>
-      Otp
-    </div>
+    <Template 
+  heading="Verify Your OTP"
+  heading1="Hello"
+  formtype="otp"
+  image={mainimg}
+  children={Otp}
+  />
   )
 }
 
