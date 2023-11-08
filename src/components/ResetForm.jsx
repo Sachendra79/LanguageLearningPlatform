@@ -23,6 +23,11 @@ const ResetForm = () => {
   event.preventDefault();
   toast.success("Please Login");
     }
+    function clickHandler(event)
+    {
+      toast.success("Please Login")
+      navigate("/")
+    }
   return (
     <div>
        <form onSubmit={submitHandler}>
@@ -37,6 +42,7 @@ const ResetForm = () => {
         name='password'
         onChange={changeHandler}
         placeholder="Password"
+        className='input'
       />
     </div>
     <div className="input-group">
@@ -47,6 +53,7 @@ const ResetForm = () => {
         name='cnfpassword'
         onChange={changeHandler}
         placeholder="Re-type Password"
+        className='input'
       />
     </div>
     <div className="input-group">
@@ -57,11 +64,13 @@ const ResetForm = () => {
         name='otp'
         onChange={changeHandler}
         placeholder="Enter Otp "
+        className='input'
       />
     </div>
 
-    <button 
-      onClick={()=> ( navigate("/"))}  >Continue</button> 
+    <button  className='main-button'
+      onClick=
+     {clickHandler} >Continue</button> 
   </div>
  
       

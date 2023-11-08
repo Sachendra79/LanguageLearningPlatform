@@ -80,7 +80,11 @@ left: 6.611rem;
 }
 .input 
 {
-  width: 18.75rem;
+  width: 21.75rem;
+   height: 60px;
+   border: solid 2px #fff;
+   border-radius: 10px;
+   margin-bottom: 15px;
 }
 .template-container 
 {
@@ -99,3 +103,44 @@ line-height:  3.1516927083333335vw;
   line-height: 42.36px;
   margin-left: 45px;
   }
+ .input-group input
+ {
+  gap: 80px;
+ }
+ .login-btn  {
+  /* position: relative; */
+  font-weight: 500;
+  border: solid 3px white;
+  background-color: #fff;
+  width: 80px;
+  border-radius: 20px;
+  /* left: 40px; */
+  height: 35px;
+ }
+ .signup-btn
+ {
+  font-weight: 500;
+  border: solid 3px white;
+  background-color: #fff;
+  width: 80px;
+  /* position: relative; */
+  /* left: 40px; */
+  border-radius: 20px;
+ }
+ .link
+ {
+  display: flex;
+  flex-direction: row-reverse;
+ margin-right: 10%;
+  color: #1D7A85;
+ }
+ .main-button 
+ { 
+margin-top: 2vh;
+  background-color: #F96A68;
+  width: 22vw;
+  height: 6vh;
+  border-radius: 15px;
+  color: #fff;
+ }
+ 

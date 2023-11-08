@@ -30,15 +30,15 @@ const LoginForm = () => {
   return (
     <div className='login-container '>
 
-        <div className='btn '>
-        <button className='login-btn '>Login</button>
+        <div className='btn flex ml-20 '>
+        <button className='login-btn'>Login</button>
         <button className='signup-btn' onClick={()=>(navigate("/signup"))}>Signup</button>
       </div>
         <form onSubmit={submitHandler}>
     
-      <div className="container  ">
+      <div className="container my-8">
       
-      <div className="input-group ">
+      <div className="input-group  ">
        
         <input
           type="text"
@@ -60,10 +60,10 @@ const LoginForm = () => {
           className='input'
         />
       </div>
-      <div>
+      <div className='link'>
         <Link to='/reset' >Forgot Password?</Link>
       </div>
-      <button >Sign in</button> 
+      <button className='main-button' >Sign in</button> 
     </div>
    
         

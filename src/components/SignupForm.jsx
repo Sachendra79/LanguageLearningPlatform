@@ -28,9 +28,9 @@ const SignupForm = () => {
 
   return (
     <div>
-       <div>
-        <button onClick={()=>(navigate("/"))}>Login</button>
-        <button >Signup</button>
+       <div className='btn flex ml-20 mb-4'>
+        <button className='login-btn' onClick={()=>(navigate("/"))}>Login</button>
+        <button className='signup-btn ' >Signup</button>
       </div>
       <form onSubmit={submitHandler}>
     
@@ -44,6 +44,7 @@ const SignupForm = () => {
         name='name'
         onChange={changeHandler}
         placeholder="Enter your name"
+        className='input '
       />
     </div>
     <div className="input-group">
@@ -54,6 +55,7 @@ const SignupForm = () => {
         name='email'
         onChange={changeHandler}
         placeholder="Enter your email"
+        className='input'
       />
     </div>
     <div className="input-group">
@@ -64,10 +66,11 @@ const SignupForm = () => {
         name='password'
         onChange={changeHandler}
         placeholder="Enter password"
+        className='input'
       />
     </div>
    
-    <button >Start Learning</button> 
+    <button className='main-button' >Start Learning</button> 
   </div>
  
       

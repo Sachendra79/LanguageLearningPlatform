@@ -21,7 +21,7 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
            <h1 className='heading'>{heading}</h1>
            
           
-        <div className='form-container '>
+        <div className='form-container'>
          {formtype === 'login' ? (
         <LoginForm/>
       ) : formtype === 'signup' ? (
