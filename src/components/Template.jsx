@@ -10,8 +10,8 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
     <div className='template-container flex  bg-[#E5E5E7] h-screen w-screen py-12 mx-auto gap-y-0 gap-x-12'>
 
     
-     <div className='img-container flex flex-col items-center justify-evenly bg-[#1D7A85] min-h-[44rem] min-w-[49rem]
-     rounded-2xl mx-2 -my-7'>
+     <div className='img-container flex flex-col items-center justify-evenly bg-[#1D7A85] min-h-[45rem] min-w-[49rem]
+     rounded-2xl mx-2 -my-10'>
      <div className='image-heading'><h1 className='text-[#fff]'>EduVerse</h1></div>
  <div className='image'><img src={image} alt="image"  width={558} height={584} loading='lazy' /></div>
 

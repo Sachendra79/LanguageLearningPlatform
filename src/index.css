@@ -6,71 +6,6 @@
  
   background-color:  #E5E5E7;
 }
-
-
-/* *{
-   width: 100%;
-  height: 100vh; 
- box-sizing: border-box;
- overflow-x: hidden;
- background-size: cover;
- object-fit: cover; 
-
-}
-.template-container 
-{
-  background-color:  #E5E5E7;
-  display: flex; 
- overflow-y: hidden;
-  background-repeat: no-repeat;
-}
-
-.main-content 
-{
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  background-repeat: no-repeat;
- 
-}
-.img-container 
-{
-  background-repeat: no-repeat;
-   background-color: #D89BFA; 
-object-fit: cover;
- height: 720px;
-margin-top: 15px; 
- border-radius: 23px;
-}
-.img-container img 
-{
-  width: 50%;
-  height: 500px;
-  align-items: center;
-position: relative;
-top: 7.688rem;
-left: 6.611rem;
-
-
-}
-.container{
-  height: 600px;
-  
-} 
-.heading
-{
-  overflow: hidden;
-}
-.heading1
-{
-  overflow: hidden;
-}
-.form-container
-{
-  overflow: hidden;
-  height: 400px;
-} 
- */
 .image-heading
 {
   font-size: 1.875rem;
@@ -136,11 +71,12 @@ line-height:  3.1516927083333335vw;
  }
  .main-button 
  { 
-margin-top: 2vh;
+  margin-top: 2vh;
   background-color: #F96A68;
   width: 22vw;
   height: 6vh;
   border-radius: 15px;
   color: #fff;
+  font-weight: 500; 
  }
  
