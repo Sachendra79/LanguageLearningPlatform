@@ -46,7 +46,7 @@ const LoginForm = () => {
           name='name'
           onChange={changeHandler}
           placeholder="Enter username"
-          className=' '
+          className='input'
         />
       </div>
       <div className="input-group">
@@ -57,7 +57,7 @@ const LoginForm = () => {
           name='password'
           onChange={changeHandler}
           placeholder="Enter password"
-          className=''
+          className='input'
         />
       </div>
       <div>

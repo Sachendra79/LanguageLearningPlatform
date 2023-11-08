@@ -11,15 +11,15 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
 
     
      <div className='img-container flex flex-col items-center justify-evenly bg-[#1D7A85] min-h-[44rem] min-w-[49rem]
-     rounded-2xl mx-2 -my-6'>
+     rounded-2xl mx-2 -my-7'>
      <div className='image-heading'><h1 className='text-[#fff]'>EduVerse</h1></div>
- <div><img src={image} alt="image"  width={558} height={584} loading='lazy' /></div>
+ <div className='image'><img src={image} alt="image"  width={558} height={584} loading='lazy' /></div>
 
 </div>
-         <div className='main-content flex flex-col space-x-4 gap-8  '>
-         
-           <h1 className='heading '>{heading}</h1>
-            <p className='heading1'>{heading1}</p>
+         <div className='main-content flex flex-col space-x-4 gap-8 mx-[9.765625vw] '>
+         <p className='heading1'>{heading1}</p>
+           <h1 className='heading'>{heading}</h1>
+           
           
         <div className='form-container '>
          {formtype === 'login' ? (

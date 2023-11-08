@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+:root{
+ 
+  background-color:  #E5E5E7;
+}
 
 
 /* *{
@@ -70,7 +73,29 @@ left: 6.611rem;
  */
 .image-heading
 {
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 1.875rem;
+  font-weight: 700;
   width: 16.313rem;
+  user-select: none;
 }
+.input 
+{
+  width: 18.75rem;
+}
+.template-container 
+{
+  width: 100%;
+}
+.heading{
+width: 25vw;
+font-weight: 700;
+font-size: 40px;
+line-height:  3.1516927083333335vw;
+}
+.heading1{
+
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 42.36px;
+  margin-left: 45px;
+  }
