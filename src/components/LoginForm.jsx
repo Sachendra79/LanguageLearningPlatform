@@ -1,9 +1,12 @@
 import React from 'react'
+import SwitchableForm from './SwitchableForm';
 import { useState  } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import ResetForm from './ResetForm'
+import './LoginForm.css';
+
 
 const LoginForm = () => {
 
@@ -68,6 +71,7 @@ const LoginForm = () => {
    
         
     </form>
+
 
     </div>
   )

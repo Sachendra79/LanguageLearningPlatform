@@ -1,0 +1,83 @@
+/* LoginForm.css */
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.login-btn,
+.signup-btn {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.link {
+  margin-bottom: 10px;
+}
+
+.main-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+  
+  .login-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .img-container {
+    width: 40%;
+    margin-right: 20px;
+  }
+  .main-content {
+    width: 60%;
+    .heading1{
+      margin-top: 20px;
+    }
+    .heading{
+      text-align: center;
+      font-size: 20px;
+      white-space: nowrap;
+    }
+  }
+
+  .login-btn,
+  .signup-btn {
+    flex: 0 0 48%; 
+    margin-right: 2%; 
+  }
+
+  .main-button {
+    width: 100%;
+  }
+}
+  @media screen and (max-width: 1024px) {
+    .main-container {
+      justify-content: flex-end;
+    }
+}
