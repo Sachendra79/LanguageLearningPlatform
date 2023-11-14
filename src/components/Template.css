@@ -17,3 +17,37 @@
     flex-direction: column;
     height: 500px;
 } */
+
+@media screen and (min-width: 768px) {
+    /* For screens larger than 768 pixels wide */
+    .template-container {
+      flex-direction: row;
+    }
+  
+    .img-container {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  
+    .main-content {
+      width: 50%;
+      padding: 20px;
+      
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+  
+    .template-container {
+      gap: 0;
+    }
+  
+    .img-container {
+      width: 40%;
+    }
+  
+    .main-content {
+      width: 60%;
+    }
+  }
+

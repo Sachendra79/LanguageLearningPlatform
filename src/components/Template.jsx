@@ -3,6 +3,7 @@ import SignupForm from './SignupForm'
 import LoginForm from './LoginForm'
 import ResetForm from './ResetForm'
 import OtpForm from './OtpForm'
+import btn from '../assets/Group 2.png'
  import './Template.css'
 
 const Template = ({heading,heading1,formtype,image ,children}) => {
@@ -34,9 +35,9 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
     </div>
         <div className='button-container'>
           <div></div>
-      <p className='para-container'>OR</p>
+      <p className='para-container font-bold'>OR</p>
       <div></div>
-      <button className='google-container'><p>Sign in with Google</p></button>
+      <button className='google-container'><img src={btn} alt='sorry'></img></button>
           </div> 
            
       </div>
