@@ -102,6 +102,22 @@ line-height:  3.1516927083333335vw;
   margin-left: 15%;
   scale: 0.8;
 }
-@media only screen and (max-width:400px) {
-  
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Styles for extra small devices go here */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  /* Styles for small devices go here */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for medium devices go here */
+}
+
+/* Large devices (laptops and desktops, 1024px and up) */
+@media only screen and (min-width: 1025px) {
+  /* Styles for large devices go here */
 }
