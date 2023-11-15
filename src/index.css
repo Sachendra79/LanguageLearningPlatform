@@ -111,6 +111,7 @@ line-height:  3.1516927083333335vw;
    background-size: cover;
    object-fit: cover;
    }
+   
    .main-content
    {
   margin: auto;
@@ -118,28 +119,127 @@ line-height:  3.1516927083333335vw;
    }
    .heading 
    {
-    width: 98%;
+    width: 110%;
     scale: 0.9;
    }
   .img-container
   {
     display: none;
   }
-   
+   .link{
+    color: black;
+    font-weight: bold;
+    
+   }
+   .main-button
+   {
+    
+    width: 70%;
+    margin-left: 8%;
+   }
   
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  /* Styles for small devices go here */
+  .template-container
+  {
+  display: inline-block;
+  background-image: url(../src/assets/Group\(1\).png);
+  background-size: cover;
+  object-fit: cover;
+  }
+  
+  .main-content
+  {
+ margin: auto;
+  
+  }
+  .heading , .heading1
+  {
+   width: 110%;
+   scale: 0.9;
+   margin-left: 25%;
+  }
+ .img-container
+ {
+   display: none;
+ }
+  .link{
+   color: black;
+   font-weight: bold;
+  }
+  .main-button
+  {
+   
+   width: 95%;
+  }
+  .form-container
+  {
+    width: 100%;
+  }
+  .input
+  {
+   width: 90%;
+  }
+  .btn{
+margin-left: 30%;
+scale: 1.3;
+  }
+
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Styles for medium devices go here */
+  .template-container
+  {
+  display: inline-block;
+  background-image: url(../src/assets/Group\(1\).png);
+  background-size: cover;
+  object-fit: cover;
+  }
+  
+  .main-content
+  {
+ margin: auto;
+ 
+  
+  }
+  .heading , .heading1
+  {
+   width: 100%;
+   scale: 1.3;
+   margin-left: 25%;
+  }
+ .img-container
+ {
+   display: none;
+ }
+  .link{
+   color: black;
+   font-weight: bold;
+   scale: 1.3;
+  }
+  .main-button{
+    width: 100%;
+  }
+  .form-container
+  {
+    width: 110%;
+
+  }
+  .input
+  {
+   width: 100%;
+  }
+  .btn{
+margin-left: 30%;
+scale: 1.3;
+  }
 }
 
 /* Large devices (laptops and desktops, 1024px and up) */
 @media only screen and (min-width: 1025px) {
-  /* Styles for large devices go here */
+  
 }

@@ -22,11 +22,13 @@
     /* For screens larger than 768 pixels wide */
     .template-container {
       flex-direction: row;
+      width: 900px;
     }
   
     .img-container {
       width: 50%;
       margin-bottom: 0;
+   
     }
   
     .main-content {
