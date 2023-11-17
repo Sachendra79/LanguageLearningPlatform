@@ -8,7 +8,7 @@ import btn from '../assets/Group 2.png'
 
 const Template = ({heading,heading1,formtype,image ,children}) => {
   return (
-    <div className='template-container flex  bg-[#E5E5E7] h-screen w-screen py-12 mx-auto gap-y-0 gap-x-12'>
+    <div className='template-container flex  bg-[#E5E5E7] h-screen w-screen py-12  gap-y-0 gap-x-12'>
 
     
      <div className='img-container flex flex-col items-center justify-evenly bg-[#1D7A85]  min-h-[45rem] min-w-[49rem]
