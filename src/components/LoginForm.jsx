@@ -4,11 +4,13 @@ import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import ResetForm from './ResetForm'
+import ReactLoading from "react-loading"
 
 const LoginForm = () => {
 
     const[formData,setFormData]=useState({name:"" ,password:""})
     const navigate=useNavigate();
+    const[loading ,setLoading]=useState(false);
     const [formtype , setFormType]=useState("");
 
     function changeHandler(event)
@@ -22,8 +24,10 @@ const LoginForm = () => {
         ))
     }
     function submitHandler(event)
+
     {
   event.preventDefault();
+    setLoading(true);
   toast.success("Enter Otp To Sign In");
     }
 
@@ -63,7 +67,9 @@ const LoginForm = () => {
       <div className='link'>
         <Link to='/reset' >Forgot Password?</Link>
       </div>
-      <button className='main-button' >Sign in</button> 
+      <button className='main-button' >
+        { loading ? <ReactLoading type='bubbles'color="#fff" height={60} width={60} className='loader' /> : "Sign In"}
+        </button> 
     </div>
    
         

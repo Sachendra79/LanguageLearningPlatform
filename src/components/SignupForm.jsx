@@ -2,10 +2,11 @@ import React from 'react'
 import { useState  } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router'
-
+import ReactLoading from 'react-loading'
 const SignupForm = () => {
     const[formData,setFormData]=useState({name:"" ,password:"",email:""})
     const navigate=useNavigate();
+    const[loading ,setLoading]=useState(false);
 
     function changeHandler(event)
     {
@@ -21,7 +22,7 @@ const SignupForm = () => {
     {
   event.preventDefault();
   toast.success("Journey Begin");
-
+  setLoading(true)
 
     }
 
@@ -70,7 +71,8 @@ const SignupForm = () => {
       />
     </div>
    
-    <button className='main-button' >Start Learning</button> 
+    <button className='main-button' >
+    { loading ? <ReactLoading type='bubbles'color="#fff" height={60} width={60} className='loader' /> : "Start Learning"}</button> 
   </div>
  
       

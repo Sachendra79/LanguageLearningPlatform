@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsListCheck, BsMenuButtonWideFill, BsFillGearFill } from 'react-icons/bs';
-
+import { Link } from 'react-router-dom';
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
   const [activeItem, setActiveItem] = useState(null);
@@ -21,39 +21,39 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
       <ul className='sidebar-list'>
         <li className={`sidebar-list-item ${activeItem === 0 ? 'active' : ''}`} onClick={() => handleItemClick(0)}>
-          <a href="">
+          <Link to="/home">
             <BsGrid1X2Fill className='icon' /> Dashboard
-          </a>
+          </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 1 ? 'active' : ''}`} onClick={() => handleItemClick(1)}>
-          <a href="">
+          <Link to="/course">
             <BsFillArchiveFill className='icon' /> Courses
-          </a>
+          </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 2 ? 'active' : ''}`} onClick={() => handleItemClick(2)}>
-          <a href="">
+          <Link to="/assignment">
             <BsFillGrid3X3GapFill className='icon' /> Assignment
-          </a>
+          </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 3 ? 'active' : ''}`} onClick={() => handleItemClick(3)}>
-          <a href="">
+          <Link to="/message">
             <BsPeopleFill className='icon' /> Messages
-          </a>
+          </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 4 ? 'active' : ''}`} onClick={() => handleItemClick(4)}>
-          <a href="">
+          <Link to="/cart">
             <BsCart3 className='icon' /> Cart
-          </a>
+          </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 5 ? 'active' : ''}`} onClick={() => handleItemClick(5)}>
-          <a href="">
+          <Link to="/support">
             <BsMenuButtonWideFill className='icon' /> Support
-          </a>
+          </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 6 ? 'active' : ''}`} onClick={() => handleItemClick(6)}>
-          <a href="">
+          <Link to="/">
             <BsFillGearFill className='icon' /> Logout
-          </a>
+          </Link>
         </li>
       </ul>
     </aside>
