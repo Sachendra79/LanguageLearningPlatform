@@ -12,9 +12,31 @@ const LoginForm = () => {
     const navigate=useNavigate();
     const[loading ,setLoading]=useState(false);
     const [formtype , setFormType]=useState("");
+    const [errors, setErrors] = useState({ name: '',password: '' });
+ 
+    function validateInput (name, value)  {
+      const errorsCopy = { ...errors };
+      const usernameRegex = /^[A-Za-z]{4,}$/;
+      const passwordrgx = /^.{6,}$/; 
+     
+  
+    if(name === 'name')
+    {
+      errorsCopy.name = usernameRegex.test(value) ? '' : 'Username does not match';
+    }
+    
+     
+       if(name === 'password')
+       {
+          errorsCopy.password = passwordrgx.test(value) ? '': 'Password must be at least 7 characters.';
+       }
+       
+      setErrors(errorsCopy);
+    };
 
     function changeHandler(event)
     {
+       const {name,value} =event.target;
         setFormData((prevData) =>
         (
             {
@@ -22,6 +44,7 @@ const LoginForm = () => {
                 [event.target.name]:event.target.value
             }
         ))
+        validateInput(name, value);
     }
     function submitHandler(event)
 
@@ -52,6 +75,7 @@ const LoginForm = () => {
           placeholder="Enter username"
           className='input'
         />
+         <div className='error-message'>{errors.name}</div>
       </div>
       <div className="input-group">
         
@@ -63,6 +87,7 @@ const LoginForm = () => {
           placeholder="Enter password"
           className='input'
         />
+          <div className='error-message'>{errors.password}</div>
       </div>
       <div className='link'>
         <Link to='/reset' >Forgot Password?</Link>

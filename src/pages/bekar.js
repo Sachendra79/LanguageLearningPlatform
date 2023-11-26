@@ -11,7 +11,7 @@ function Home() {
   }
 
   return (
-    <div className='grid-container'>
+    <div className='grid-container sticky'>
     <Header OpenSidebar={OpenSidebar}/>
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       {/*<Home />*/}

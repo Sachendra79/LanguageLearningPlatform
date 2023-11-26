@@ -11,22 +11,19 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
-      <div className='sidebar-title'>
-        <div className='sidebar-brand'>
-          <span className='brand-part edu'>Edu</span>
-          <span className='brand-part verse'>Verse</span>
-        </div>
+      <div className='sidebar-title '>
+        
         <span className='icon close_icon' onClick={OpenSidebar}>X</span>
       </div>
 
-      <ul className='sidebar-list'>
+      <ul className='sidebar-list mt-10'>
         <li className={`sidebar-list-item ${activeItem === 0 ? 'active' : ''}`} onClick={() => handleItemClick(0)}>
           <Link to="/home">
             <BsGrid1X2Fill className='icon' /> Dashboard
           </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 1 ? 'active' : ''}`} onClick={() => handleItemClick(1)}>
-          <Link to="/course">
+          <Link to="/courses">
             <BsFillArchiveFill className='icon' /> Courses
           </Link>
         </li>

@@ -7,9 +7,36 @@ const SignupForm = () => {
     const[formData,setFormData]=useState({name:"" ,password:"",email:""})
     const navigate=useNavigate();
     const[loading ,setLoading]=useState(false);
+    const [errors, setErrors]=useState({name:"" ,password:"",email:""})
+ 
+    function validateInput (name, value)  {
+      const errorsCopy = { ...errors };
+      const usernameRegex = /^[A-Za-z]{4,}$/;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      const stNumberRegex = /^.{6,}$/; 
+   
+  
+    if(name === 'name')
+    {
+      errorsCopy.name = usernameRegex.test(value) ? '' : 'Username must contain alphabet only';
+    }
+    
+      if(name=== 'email')
+     {
+      errorsCopy.email = emailRegex.test(value) ? '': 'Invalid email format';
+     }
+     
+       if(name === 'password')
+       {
+          errorsCopy.password = stNumberRegex.test(value) ? '': 'Password must be at least 7 characters.';
+       }
+       
+      setErrors(errorsCopy);
+    };
+
 
     function changeHandler(event)
-    {
+    { const { name, value } = event.target;
         setFormData((prevData) =>
         (
             {
@@ -17,6 +44,7 @@ const SignupForm = () => {
                 [event.target.name]:event.target.value
             }
         ))
+        validateInput(name, value);
     }
     function submitHandler(event)
     {
@@ -47,6 +75,7 @@ const SignupForm = () => {
         placeholder="Enter your name"
         className='input '
       />
+         <div className='error-message'>{errors.name}</div>
     </div>
     <div className="input-group">
      
@@ -58,6 +87,7 @@ const SignupForm = () => {
         placeholder="Enter your email"
         className='input'
       />
+         <div className='error-message'>{errors.email}</div>
     </div>
     <div className="input-group">
    
@@ -69,6 +99,7 @@ const SignupForm = () => {
         placeholder="Enter password"
         className='input'
       />
+         <div className='error-message'>{errors.password}</div>
     </div>
    
     <button className='main-button' >
