@@ -16,10 +16,9 @@ const Message = () => {
     <div className='right-side' >
            <div className='header'> <Header OpenSidebar={OpenSidebar}/></div>
            <div className='content'>
-           <div>A</div>
-           <div>A</div>
-           <div>A</div>
-           <div>A</div>
+          
+
+           
            </div>
 
     </div>

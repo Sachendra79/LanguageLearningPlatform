@@ -472,3 +472,13 @@ flex: 2;
    color: red;
    margin-top: -10px;
 }
+.featured-courses
+{
+  display: flex;
+  justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+.courses{
+width: 300px;
+
+}
