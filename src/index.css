@@ -475,10 +475,19 @@ flex: 2;
 .featured-courses
 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
    flex-wrap: wrap;
 }
 .courses{
 width: 300px;
 
+}
+.search-text
+{
+  font-size: medium;
+}
+.search-button
+{
+  width: 3em;
+  
 }
