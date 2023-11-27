@@ -144,6 +144,7 @@ const Course = () => {
   const [loading, setLoading] = useState(false);
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
   const [courses, setCourses] = useState([]);
+ 
 
   const OpenSidebar = () => {
     setOpenSidebarToggle(!openSidebarToggle);
@@ -195,7 +196,12 @@ const Course = () => {
   {
               navigate("/courses")
   }
+ const allHandler =() =>
+ {
+  setSectors([]);
  
+ }
+
 
   return (
     <div className='main-container grid-container'>
@@ -223,6 +229,7 @@ const Course = () => {
       <p className='search-text'>Search</p>
     </button>
     </div>
+   
     <div className='featured-courses mt-10'>
    
 {loading ? (
@@ -252,7 +259,10 @@ courses.map(course => (
             <Link to="/courses" className='text-xl text-[#000] font-semibold'>Category Present</Link>
 
             <div className="category-filters flex flex-wrap gap-5 text-[#000] font-semibold ">
-  <Link to="/courses" onClick={() => setSectors([])} className='bg-[#fff] border-black border-solid border-2 px-2 rounded-xl'> All</Link>
+  <Link to="/courses" onClick={
+   
+     allHandler
+    } className='bg-[#fff] border-black border-solid border-2 px-2 rounded-xl'> All</Link>
   {sectors.map((sector) => (
     <Link
       key={sector.sector_uuid}
@@ -264,8 +274,7 @@ courses.map(course => (
     </Link>
   ))}
 </div>
-
-            {loading ? (
+      {loading ? (
               <ReactLoading type='spin' color="blue" height={60} width={60} className='loader' />
             ) : (
               sectors.map((sector) => (
@@ -291,6 +300,8 @@ courses.map(course => (
                 </div>
               ))
             )}
+
+
           </div>
         </div>
       </div>

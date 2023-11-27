@@ -5,8 +5,17 @@ import ResetForm from './ResetForm'
 import OtpForm from './OtpForm'
 import btn from '../assets/Group 2.png'
  import './Template.css'
+ import { GoogleOAuthProvider } from '@react-oauth/google'
+ import { GoogleLogin } from '@react-oauth/google';
+ import { useHistory } from 'react-router-dom';
+ import { useNavigate } from 'react-router-dom'
+import { useAuth } from './AuthContext'
+
 
 const Template = ({heading,heading1,formtype,image ,children}) => {
+
+  const navigate =useNavigate();
+  const { login } = useAuth();
   return (
     <div className='template-container flex  bg-[#E5E5E7] h-screen w-screen py-12  gap-y-0 gap-x-12'>
 
@@ -33,11 +42,29 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
         <OtpForm/>
       )}  
     </div>
-        <div className='button-container mt-3'>
-          <div></div>
+        <div className='button-container '>
+       
       <p className='para-container font-bold'>OR</p>
-      <div></div>
-      <button className='google-container'><img src={btn} alt='sorry'></img></button>
+      <div >
+     
+        <GoogleOAuthProvider clientId="197140301378-d983fr88pf7jq9uo5bqml6v0qcjm2g58.apps.googleusercontent.com">
+        <GoogleLogin
+             onSuccess={credentialResponse => {
+              login();
+                navigate("/home");
+             }}
+             onError={() => {
+               console.log('Login Failed');
+             }}
+            />;
+          
+          
+          
+          
+          </GoogleOAuthProvider>;
+        
+        
+        </div>
           </div> 
            
       </div>
