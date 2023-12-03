@@ -6,6 +6,7 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 import sideimg from "../assets/login.jpg"
 import courseimg from "../assets/course-image.jpg"
+import toast from 'react-hot-toast';
 
 const CourseDetailPage = () => {
   const { course_uuid } = useParams();
@@ -42,10 +43,28 @@ const CourseDetailPage = () => {
 
 const addToCartHandler =async () =>
 {
-  try {
-    
-  } catch (error) {
-    
+  
+
+  try { 
+    const cartItem = {
+      author: courseDetails.author.id, 
+      title: courseDetails.title,
+      price: courseDetails.price,
+    };
+  
+  
+  const response = await axios.post('https://courses-eduverse.onrender.com/courses/cart/', cartItem);
+  
+  if (response.status === 200) {
+    toast.success("Added to cart succesfully");
+  } else {
+    toast.error("Failed to add ");
+    console.error('Error is', response.data);
+  }
+} 
+  
+  catch (error) {
+    console.error('Error adding course to cart:', error);
   }
 }
 
