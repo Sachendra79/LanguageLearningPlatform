@@ -8,7 +8,7 @@ const Search = ({ match }) => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    // Fetch courses based on the search term from your backend API
+    
     axios.get(`https://courses-eduverse.onrender.com/courses/search/${searchTerm}`)
       .then(response => setCourses(response.data))
       .catch(error => console.error('Error fetching courses:', error));

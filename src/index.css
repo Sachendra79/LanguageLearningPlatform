@@ -491,3 +491,12 @@ width: 300px;
   width: 3em;
   
 }
+.detail-right:hover{
+  box-shadow: 2px 3px 10px black ;
+}
+.detail-right img:hover{
+  box-shadow: 2px 3px 10px black ;
+}
+.detail-right button:hover{
+  box-shadow: 2px 3px 10px black ;
+}

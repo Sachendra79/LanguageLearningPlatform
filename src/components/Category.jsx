@@ -69,7 +69,7 @@ const Category = () => {
       sectors.map(course => (
 
         <div key={course.course_uuid} className='courses'>
-            <img src={courseimage} className='rounded-xl' ></img>
+            <img  src={course.image_url} className='rounded-xl w-60 h-44' ></img>
           <h4 className='text-[#000] font-semibold' >Title: {course.title}</h4>
           <p className='course-author text-[#000]' >Author: {course.author.name}</p>
 

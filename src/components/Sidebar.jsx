@@ -32,11 +32,11 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             <BsFillGrid3X3GapFill className='icon' /> Assignment
           </Link>
         </li>
-        <li className={`sidebar-list-item ${activeItem === 3 ? 'active' : ''}`} onClick={() => handleItemClick(3)}>
+        {/* <li className={`sidebar-list-item ${activeItem === 3 ? 'active' : ''}`} onClick={() => handleItemClick(3)}>
           <Link to="/message">
             <BsPeopleFill className='icon' /> Messages
           </Link>
-        </li>
+        </li> */}
         <li className={`sidebar-list-item ${activeItem === 4 ? 'active' : ''}`} onClick={() => handleItemClick(4)}>
           <Link to="/cart">
             <BsCart3 className='icon' /> Cart
