@@ -47,7 +47,7 @@ const addToCartHandler =async () =>
 
   try { 
     const cartItem = {
-      author: courseDetails.author.id, 
+      author: courseDetails.author.name, 
       title: courseDetails.title,
       price: courseDetails.price,
     };
@@ -64,13 +64,10 @@ const addToCartHandler =async () =>
 } 
   
   catch (error) {
+    toast.error("Failed to add ");
     console.error('Error adding course to cart:', error);
   }
 }
-
-
-
-
 
 
   return (
@@ -103,7 +100,7 @@ const addToCartHandler =async () =>
 
       <div className=' text-black font-semibold mx-2'><p>Price: ${courseDetails.price}</p></div>
 
-      <div className='mx-auto '><button className='bg-gray-800 w-60 rounded-lg h-10'>Add to Cart</button></div>
+      <div className='mx-auto '><button onClick={addToCartHandler} className='bg-gray-800 w-60 rounded-lg h-10'>Add to Cart</button></div>
     
     </div>
     

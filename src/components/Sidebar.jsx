@@ -1,13 +1,36 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useState ,useEffect } from 'react';
 import { BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsListCheck, BsMenuButtonWideFill, BsFillGearFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
+
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
   const [activeItem, setActiveItem] = useState(null);
+  const [cartItems, setCartItems] = useState([]);
 
   const handleItemClick = (index) => {
     setActiveItem(index);
   };
+
+  useEffect(() => {
+    const fetchCart = async () =>
+    {
+     try {
+       // fetching the data
+       const response = await axios.get('https://courses-eduverse.onrender.com/courses/cart/');
+       setCartItems(response.data.data);
+   
+     } catch (error) {
+       console.error('Error fetching cart items:', error);
+     }
+   
+   
+    }
+    fetchCart();
+   
+   }, []);
+
+
 
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
@@ -37,11 +60,14 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             <BsPeopleFill className='icon' /> Messages
           </Link>
         </li> */}
-        <li className={`sidebar-list-item ${activeItem === 4 ? 'active' : ''}`} onClick={() => handleItemClick(4)}>
+        <div><li className={`sidebar-list-item ${activeItem === 4 ? 'active' : ''}`} onClick={() => handleItemClick(4)}>
           <Link to="/cart">
             <BsCart3 className='icon' /> Cart
           </Link>
+          <h1>{cartItems.length}</h1>
         </li>
+        </div>
+        
         <li className={`sidebar-list-item ${activeItem === 5 ? 'active' : ''}`} onClick={() => handleItemClick(5)}>
           <Link to="/support">
             <BsMenuButtonWideFill className='icon' /> Support
