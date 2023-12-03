@@ -40,6 +40,19 @@ const CourseDetailPage = () => {
     return <p></p>;
   }
 
+const addToCartHandler =async () =>
+{
+  try {
+    
+  } catch (error) {
+    
+  }
+}
+
+
+
+
+
 
   return (
    
