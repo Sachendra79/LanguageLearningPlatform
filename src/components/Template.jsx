@@ -58,9 +58,6 @@ const Template = ({heading,heading1,formtype,image ,children}) => {
              }}
             />;
           
-          
-          
-          
           </GoogleOAuthProvider>;
         
         

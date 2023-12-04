@@ -137,6 +137,7 @@ import Profile from './pages/Profile';
 import CourseDetailPage from './components/CourseDetailPage';
 import Category from './components/Category';
 import Search from './components/Search';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -169,6 +170,27 @@ function App() {
           ) : (
             <Route path="*" element={<Navigate to="/" />}  /> )}
         </Routes>
+        {/* <Routes>
+  <Route path="/" element={<Login />} />
+  <Route path="/signup" element={<Signup />} />
+  <Route path="/otp" element={<Otp />} />
+  <Route path="/reset" element={<Reset />} />
+
+  <PrivateRoute path="/home" element={<Dashboard />} />
+  <PrivateRoute path="/assignment" element={<Assignment />} />
+  <PrivateRoute path="/cart" element={<Cart />} />
+  <PrivateRoute path="/courses" element={<Course />} />
+  <PrivateRoute path="/message" element={<Message />} />
+  <PrivateRoute path="/support" element={<Support />} />
+  <PrivateRoute path="/profile" element={<Profile />} />
+  <PrivateRoute
+    path="/courses/detail/:course_uuid"
+    element={<CourseDetailPage />}
+  />
+  <PrivateRoute path="/courses/:sector_uuid" element={<Category />} />
+  <PrivateRoute path="/courses/search/:term" element={<Search />} />
+  <Route path="/logout" element={<Navigate to="/" state={{ from: 'logout' }} />} />
+</Routes> */}
   
     </div>
   );

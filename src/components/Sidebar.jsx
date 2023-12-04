@@ -1,13 +1,15 @@
 import axios from 'axios';
 import React, { useState ,useEffect } from 'react';
 import { BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsListCheck, BsMenuButtonWideFill, BsFillGearFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
   const [activeItem, setActiveItem] = useState(null);
   const [cartItems, setCartItems] = useState([]);
-
+  
+const navigate =useNavigate();
   const handleItemClick = (index) => {
     setActiveItem(index);
   };
@@ -16,7 +18,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
     const fetchCart = async () =>
     {
      try {
-       // fetching the data
+    
        const response = await axios.get('https://courses-eduverse.onrender.com/courses/cart/');
        setCartItems(response.data.data);
    
@@ -30,6 +32,15 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
    
    }, []);
 
+   const handleLogout = () => {
+    const confirmed = window.confirm('Are you sure you want to logout?');
+
+    if (confirmed) {
+  
+      navigate("/") ;
+    }
+   
+  };
 
 
   return (
@@ -83,7 +94,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </li>
         <li className={`sidebar-list-item ${activeItem === 6 ? 'active' : ''}`} onClick={() => handleItemClick(6)}>
-          <Link to="/">
+          <Link to="#" onClick={handleLogout} >
             <BsFillGearFill className='icon' /> Logout
           </Link>
         </li>

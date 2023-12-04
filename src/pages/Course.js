@@ -137,7 +137,7 @@ courses.map(course => (
   {sectors.map((sector) => (
     <Link
       key={sector.sector_uuid}
-      to={`/courses/${sector.sector_uuid}`}  // Correct path for category links
+      to={`/courses/${sector.sector_uuid}`} 
       onClick={() => handleCategoryFilter(sector.sector_uuid)}
       className='border-black border-solid border-2 px-3 bg-[#fff] rounded-xl'
     >
@@ -155,7 +155,7 @@ courses.map(course => (
                     {sector.featured_course.map((course) => (
                       <div key={course.course_uuid} className="courses">
                         <img className='rounded-xl w-60 h-44' src={course.image_url} alt={course.title}></img>
-                        <h4 className='text-[#000] font-semibold'>{course.title}</h4>
+                        <h4 className='text-[#000] font-semibold w-60'>{course.title}</h4>
                         <p className='course-author text-[#000]'>Author: {course.author.name}</p>
                         <p className='course-price text-[#b33838]'>Price: ${course.price}</p>
 

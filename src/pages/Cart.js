@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
-
+import toast from 'react-hot-toast'
 import { useState, useEffect,} from 'react'
 import axios from 'axios';
 
@@ -33,6 +33,12 @@ useEffect(() => {
 
 }, []);
 
+const clickHandler = () =>
+{
+toast.success("done");
+}
+
+
   return (
     <div className='main-container grid-container'>
       <div className='sidebar'>  <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/></div>
@@ -46,16 +52,17 @@ useEffect(() => {
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        <ul className='cart-list flex flex-row  gap-10 w-80 mt-9'>
+        <div className=''>
+        <ul className='cart-list flex flex-row  gap-10 w-80 mt-9 '>
           {cartItems.map((item, index) => (
-            <li key={index} className='cart-item flex flex-col flex-wrap justify-evenly gap-5 rounded-xl '>
-              <p className='w-80 m-2 text-[#000]'>Title: {item.title}</p>
-              {/* <p>Author: {item.author}</p> */}
-              <p className='m-2 text-[#b03b3b] font-semibold'>Price: ${item.price}</p>
-           
+              <li key={index} className='cart-item flex flex-col flex-wrap justify-evenly gap-5 rounded-xl '>
+            <div><p className='cart-title m-2 text-[#000]'>Title: {item.title}</p></div>
+            <div> <p className='m-2 text-[#b03b3b] font-semibold'>Price: ${item.price}</p></div>
+          <div><button className='btn-pink btn-project'onClick={clickHandler} >Purchase</button></div>
             </li>
           ))}
         </ul>
+        </div>
       )}
     </div>
 
