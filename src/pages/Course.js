@@ -91,10 +91,10 @@ const Course = () => {
 <div className='m-auto text-3xl'>
     <input
       type="text"
-      placeholder="Search by title"
+      // placeholder="Search by title"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      className='rounded-xl boder-solid border-black border-2 text-[#8e2d2d]'
+      className='rounded-xl boder-solid border-black border-2 text-[#8e2d2d] '
     />
     <button onClick={handleSearch} className='search-button bg-[#594ed3] text-[#000] ml-3 rounded-xl text-3xl pt-2'>
       <p className='search-text'>Search</p>

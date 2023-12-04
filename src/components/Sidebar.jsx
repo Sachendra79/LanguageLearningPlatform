@@ -60,13 +60,22 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             <BsPeopleFill className='icon' /> Messages
           </Link>
         </li> */}
-        <div><li className={`sidebar-list-item ${activeItem === 4 ? 'active' : ''}`} onClick={() => handleItemClick(4)}>
-          <Link to="/cart">
+  
+        
+         <li className={`sidebar-list-item ${activeItem === 4 ? 'active' : ''}`} onClick={() => handleItemClick(4)}>
+         <Link to="/cart">
             <BsCart3 className='icon' /> Cart
           </Link>
-          <h1>{cartItems.length}</h1>
-        </li>
-        </div>
+          <h2 className='text-[#000] '>{cartItems.length}</h2>
+          </li>
+    
+        
+          
+
+        
+      
+       
+    
         
         <li className={`sidebar-list-item ${activeItem === 5 ? 'active' : ''}`} onClick={() => handleItemClick(5)}>
           <Link to="/support">

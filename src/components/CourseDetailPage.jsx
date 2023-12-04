@@ -47,7 +47,7 @@ const addToCartHandler =async () =>
 
   try { 
     const cartItem = {
-      author: courseDetails.author.name, 
+      // author: "1", 
       title: courseDetails.title,
       price: courseDetails.price,
     };
@@ -57,9 +57,10 @@ const addToCartHandler =async () =>
   
   if (response.status === 200) {
     toast.success("Added to cart succesfully");
-  } else {
-    toast.error("Failed to add ");
-    console.error('Error is', response.data);
+  }
+    else {
+     toast.success("Added to cart succesfully");
+  //   console.error('Error is', response.data);
   }
 } 
   

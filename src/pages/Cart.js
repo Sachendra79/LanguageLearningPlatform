@@ -41,17 +41,17 @@ useEffect(() => {
              <div className='content'>
           
              <div>
-      <h2>Your Cart</h2>
-      <h2>{cartItems.length}</h2>
+      <h2 className='text-5xl font-semibold text-[#000] mx-96 '>Your Cart</h2>
+      <h2 className='text-[#000] mt-5 font-semibold text-2xl'> Total item in your cart : <span className='text-[#e94848]'> {cartItems.length}</span></h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        <ul>
+        <ul className='cart-list flex flex-row  gap-10 w-80 mt-9'>
           {cartItems.map((item, index) => (
-            <li key={index}>
-              <p>Title: {item.title}</p>
-              <p>Author: {item.author}</p>
-              <p>Price: ${item.price}</p>
+            <li key={index} className='cart-item flex flex-col flex-wrap justify-evenly gap-5 rounded-xl '>
+              <p className='w-80 m-2 text-[#000]'>Title: {item.title}</p>
+              {/* <p>Author: {item.author}</p> */}
+              <p className='m-2 text-[#b03b3b] font-semibold'>Price: ${item.price}</p>
            
             </li>
           ))}
